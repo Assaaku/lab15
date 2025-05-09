@@ -1,20 +1,36 @@
-package com.example;
+package labxx.sict.must.edu.mn;
 
 /**
- * Hello world!
+ * Энгийн тооны машин.
  *
+ * <p>Дараах үндсэн үйлдлүүдийг дэмжинэ:
+ * add, subtract, multiply, divide.</p>
  */
-//asdasd
-//asdd
+public class Calculator {
 
+  /** a + b */
+  public double add(double a, double b) {
+    return a + b;
+  }
 
-public class App 
-{
+  /** a − b */
+  public double subtract(double a, double b) {
+    return a - b;
+  }
 
+  /** a × b */
+  public double multiply(double a, double b) {
+    return a * b;
+  }
 
-    
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+  /**
+   * a ÷ b.<br>
+   * b = 0 үед {@link IllegalArgumentException} шиднэ.
+   */
+  public double divide(double a, double b) {
+    if (b == 0) {
+      throw new IllegalArgumentException("Тэгээр хуваах боломжгүй");
     }
+    return a / b;
+  }
 }
